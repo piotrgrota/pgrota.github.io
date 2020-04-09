@@ -14,7 +14,7 @@ Everyting achieved alone with a lot of self motivation and hard working not only
 
 ### More Information
 
-Currently working with Java language but previously was involved with F#,C#,XSLT, Powershell, JavaScript, DevOps stuff and even Python . I am not afraid of change langugage since this allow us to learn new thigs everytime.  
+Currently working with Java language for about 1 year but previously was involved with F#,C#,XSLT, Powershell, JavaScript, DevOps stuff and even Python . I am not afraid of change langugage since this allow us to learn new thigs everytime.  
 
 
 
