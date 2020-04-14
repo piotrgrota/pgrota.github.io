@@ -3,7 +3,7 @@ layout: post
 title: Document code with Swagger
 ---
 
-![_config.yml]({{ site.baseurl }}/images/post1/swagger.png)
+![_config.yml]({{ site.baseurl }}/images/post1/swagger1.png)
 
 
 I was always curious how you can do good documentation to the code itself without writing a lot of text in other platforms like Confluence.
