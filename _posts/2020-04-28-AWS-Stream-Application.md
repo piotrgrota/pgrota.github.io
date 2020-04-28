@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to analyze real time data in AWS ?
+title: How to Analyze Real Time Data in AWS ?
 ---
 
 
@@ -8,7 +8,7 @@ title: How to analyze real time data in AWS ?
 
 ## Problem:
 
-How we can Analyze data in real time with AWS ? 
+How we can Analyze Real Time Data with AWS ? 
 
 <b>Use case: </b> 
 
