@@ -163,16 +163,15 @@ Sample Data produced by this query
 </tbody>
 </table>
 
-
 <br />
 
 
 <script src="https://gist.github.com/piotrgrota/da8366ee2f8184ebc6095fb57b514e6b.js"></script>
 
 * Little more complex example:
-    * First we are grouping data by 1 minute Time Windows and do sum
-    * Then we are calculating anomaly for data
-    * We used different parameters since they are less data and I wanted to show some results 
+    * First we are grouping data by 1 minute Time Windows and do Sum
+    * Then we are calculating anomaly for Data
+    * We used different parameters since grouping were used and we don't have as many data points
 
 
 
@@ -242,6 +241,8 @@ Sample Data produced by this query
 ### Conclusion 
 
 Machine Learning algorithms can do great jobs on Real Time data and with AWS you can do easy detection Fraud with knowing SQL only.
+Please make changes to parameters and experiment to produce better results.
+
 More info below: 
 
 [Kinesis Random Cut Forest](https://docs.aws.amazon.com/kinesisanalytics/latest/sqlref/sqlrf-random-cut-forest-with-explanation.html)
