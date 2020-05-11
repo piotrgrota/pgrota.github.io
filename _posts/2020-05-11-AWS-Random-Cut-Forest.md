@@ -4,7 +4,7 @@ title: How to detect Fraud on Real Time Data with AWS?
 ---
 
 
-![_config.yml]({{ site.baseurl }}/images/post4/3-Figure2-1.png)
+![_config.yml]({{ site.baseurl }}/images/post4/Webp.net-resizeimage (1).png)
 
 ### Problem:
 
