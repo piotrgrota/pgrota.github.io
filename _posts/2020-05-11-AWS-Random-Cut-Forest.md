@@ -9,7 +9,7 @@ title: How to detect Fraud on Real Time Data with AWS?
 ### Problem:
 
 How we can detect Financial Fraud on real-time data ? Let's dive in and see how we can implement this. 
-We use simple balance data generation for clients to simulate it.
+We will use simple transaction data generation for clients to simulate it.
 
 <b>Use case: </b> 
 
@@ -39,8 +39,8 @@ Each side of the subdivision represents a node in the tree.
 
 ![_config.yml]({{ site.baseurl }}/images/post4/chart2.png)
 
-You can see node <b>A</b> represent a root node (which always exists and that is the projection of all data points) and <b>B </b> , <b>C</b> represent both left and  right side of division.
-Color is determining if we have any nodes on that side apart  tested one. 
+You can see node <b>A</b> represent a root node (which always exists and that is the projection of all data points) <b>B </b> , <b>C</b> represent both left and  right side of division.
+Color is determining if we have any nodes on that side apart from tested one. 
 
 <br />
 
@@ -59,9 +59,8 @@ Node <b>B</b> now has been expanded into two more <b>D</b> and <b>C</b>.  Still 
 
 ![_config.yml]({{ site.baseurl }}/images/post4/chart4.png)
 
-You can see  we divided this time right side but finally we get to our tested point.
-<b> F</b> is white - because we have only tested on this side
-on right side we node that is not our tested node. 
+You can see we divided this time left side .
+<b> F</b> is white - because we have only tested node here. This was the last step to build tree .
 
 
 The final step performed by the Random Cut Forest algorithm is to combine the trees into a forest. If lots of the samples have small trees then the target data point is likely to be an anomaly. If only a few of the samples have small trees then it’s unlikely to be an anomaly.
@@ -102,10 +101,13 @@ Returns:
 * Directionality: This is either HIGH if the value of the column is above the recently observed trend or LOW if it’s below the trend. During the learning phase, this defaults to LOW.
 
 
+Example of simple SQL calculating anomaly for Balance column:
+<br />
+
+
+
 <script src="https://gist.github.com/piotrgrota/593f40b1490b71ab6749b4f12234bd98.js"></script>
 
-
-With help of AWS we can calculate Anomaly Score with explanation:
 
 Sample Data produced by this query
 
@@ -166,13 +168,14 @@ Sample Data produced by this query
 <br />
 
 
-<script src="https://gist.github.com/piotrgrota/da8366ee2f8184ebc6095fb57b514e6b.js"></script>
+* Little more complex example below :
 
-* Little more complex example:
     * First we are grouping data by 1 minute Time Windows and do Sum
     * Then we are calculating anomaly for Data
     * We used different parameters since grouping were used and we don't have as many data points
 
+
+<script src="https://gist.github.com/piotrgrota/da8366ee2f8184ebc6095fb57b514e6b.js"></script>
 
 
 <br />
@@ -190,7 +193,7 @@ Sample Data produced by this query
 <thead>
   <tr>
     <th class="tg-4yk9">ROWTIME</th>
-    <th class="tg-4yk9">User</th>
+    <th class="tg-4yk9">USER</th>
     <th class="tg-4yk9">SUM_BALANCE</th>
     <th class="tg-4yk9">ANOMALY_SCORE</th>
     <th class="tg-0lax">ANOMALY_EXPLANATION</th>
