@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to detect Fraud on Real Time Data ?
+title: How to detect Fraud on Real Time Data with AWS?
 ---
 
 
